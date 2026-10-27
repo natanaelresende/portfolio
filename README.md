@@ -15,11 +15,12 @@ git push -u origin main
 # Netlify → Add new site → Import from GitHub → Deploy
 ```
 
-Config já inclusa: `netlify.toml` + `_redirects` (rotas /sobre, /projetos, /contato).
+Config já inclusa: `netlify.toml` + `_redirects` (rotas /sobre, /projetos, /contato, /tecnoled).
 
 ## Estrutura
 ```
-├── index.html / sobre.html / projetos.html / contato.html
+├── index.html / sobre.html / projetos.html / contato.html / tecnoled.html
+├── img/tecnoled-home.webp (estudo de caso)
 ├── css/style.css (sincronizado com app/globals.css)
 ├── js/script.js
 ├── app/ (Next.js V2)

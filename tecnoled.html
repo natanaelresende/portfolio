@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estudo de caso do site Tecnoled — catálogo de 9 produtos com busca, carrinho de orçamento e finalização no WhatsApp. HTML, CSS e JavaScript puro, sem frameworks." />
+  <title>Tecnoled — Estudo de caso — Natanael Eugênio Resende</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/responsive.css?v=13" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">NR<span>.</span></a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="sobre.html" class="nav__link">Sobre</a>
+        <a href="projetos.html" class="nav__link nav__link--active">Projetos</a>
+        <a href="contato.html" class="nav__link">Contato</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>Site Tecnoled</h1>
+      <p>Catálogo de 9 produtos com busca, carrinho de orçamento e finalização no WhatsApp — sem checkout, sem servidor, sem frameworks.</p>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <figure style="margin:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:var(--shadow-card);">
+        <img src="img/tecnoled-home.webp" alt="Página inicial do site Tecnoled — painéis LED para organização de filas" width="1440" height="900" />
+      </figure>
+      <p class="muted" style="font-size:.82rem;margin-top:.6rem;">Página inicial — hero, produto em destaque e atalhos de WhatsApp e orçamento.</p>
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h2 class="section__title">Sobre o projeto</h2>
+        <p>A Tecnoled vende painéis eletrônicos de senha, chamada de garçom e placares, e precisava de uma vitrine que terminasse em <strong>orçamento</strong> — não em pagamento online. O site foi construído como um protótipo de loja: o cliente navega, monta o orçamento no navegador e finaliza numa conversa de WhatsApp com a mensagem já pronta.</p>
+        <p>Tudo é estático: funciona hospedado em qualquer lugar ou aberto como arquivo local, sem backend e sem custo de manutenção.</p>
+
+        <h2 class="section__title">Funcionalidades</h2>
+        <ul class="list">
+          <li>Busca por nome, categoria e palavras-chave + filtros por categoria</li>
+          <li>Modal de produto com galeria, ficha técnica, itens inclusos e segmentos</li>
+          <li>Variações com preço por opção (ex.: bobina em 1, 25 ou 50 rolos)</li>
+          <li>Carrinho de orçamento persistente no <code>localStorage</code></li>
+          <li>Finalização que monta a mensagem completa e abre o WhatsApp (<code>wa.me</code>)</li>
+          <li>Link direto por produto (<code>#produto=...</code>) com botão de copiar</li>
+          <li>FAQ, segmentos de mercado e menu mobile</li>
+          <li>SEO: Open Graph e dados estruturados JSON-LD (Organization + Product)</li>
+        </ul>
+        <h2 class="section__title">Tecnologias</h2>
+        <div class="tech-grid">
+          <div class="tech-card"><strong>HTML5</strong><span>Semântica • Acessibilidade • JSON-LD</span></div>
+          <div class="tech-card"><strong>CSS3</strong><span>Variáveis • Grid • Responsivo</span></div>
+          <div class="tech-card"><strong>JavaScript</strong><span>ES6 • Eventos • Sem frameworks</span></div>
+          <div class="tech-card"><strong>localStorage</strong><span>Carrinho persistente • Hash de produto</span></div>
+        </div>
+
+        <h2 class="section__title">Como executar</h2>
+        <pre style="background:var(--card);border:1px solid var(--border);border-radius:4px;padding:1rem 1.2rem;font-size:.85rem;line-height:1.7;">duplo clique em index.html        # arquivo local
+
+# ou, para evitar bloqueios de localStorage:
+python -m http.server 8000        # http://localhost:8000</pre>
+
+        <h2 class="section__title">O que aprendi</h2>
+        <ul class="list">
+          <li>Separar <strong>dados</strong> (<code>data.js</code>) da <strong>lógica</strong> (<code>app.js</code>): o cliente atualiza produtos sem tocar em código</li>
+          <li>Desenhar o fluxo inteiro em torno de uma ação só — o orçamento no WhatsApp — em vez de fingir que existe checkout</li>
+          <li>Quando falta foto, dá para gerar render ilustrativo (SVG) e trocar por foto real depois</li>
+          <li>Detalhes de produção mudam a conversão: imagem em WebP, link compartilhável do produto e mensagem pronta no WhatsApp</li>
+        </ul>
+      </div>
+      <aside class="aside-card">
+        <h3>Ficha técnica</h3>
+        <p><strong>Tipo</strong><br />Site estático — catálogo + orçamento</p>
+        <p><strong>Papel</strong><br />Desenvolvimento front-end do zero</p>
+        <hr />
+        <h3>Stack</h3>
+        <p>HTML5 • CSS3 • JavaScript (ES6) • localStorage • JSON-LD</p>
+        <hr />
+        <h3>Entrega</h3>
+        <p class="muted">9 produtos, busca e filtros, modal com variações, carrinho persistente, FAQ e finalização no WhatsApp.</p>
+        <hr />
+        <h3>Status</h3>
+        <p class="muted">Modelo pronto e testado. Fotos reais, contatos oficiais e publicação entram na próxima etapa.</p>
+        <hr />
+        <a href="projetos.html" class="btn btn--ghost">Voltar aos projetos</a>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Natanael Eugênio Resende</span>
+      <span class="footer__links">
+        <a href="https://github.com/natanaelresende" target="_blank" rel="noopener noreferrer">GitHub</a> •
+        <a href="https://www.linkedin.com/in/natanael-eug%C3%AAAnio-resende-041a163b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
+        <a href="mailto:natanaelresende17@gmail.com">E-mail</a>
+      </span>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
