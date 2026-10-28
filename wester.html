@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estudo de caso do site Wester Jiu-Jitsu — página de projeto social gratuito da Prefeitura de Garça, com horários, localização e contato direto no WhatsApp. HTML, CSS e JavaScript puro." />
+  <title>Wester Jiu-Jitsu — Estudo de caso — Natanael Eugênio Resende</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/responsive.css?v=13" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">NR<span>.</span></a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="sobre.html" class="nav__link">Sobre</a>
+        <a href="projetos.html" class="nav__link nav__link--active">Projetos</a>
+        <a href="contato.html" class="nav__link">Contato</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>Wester Jiu-Jitsu</h1>
+      <p>Página de um projeto social gratuito: em dez segundos o visitante entende que a aula é de graça, para quem é e onde acontece — e fala direto no WhatsApp.</p>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <figure style="margin:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:var(--shadow-card);">
+        <img src="img/wester-home.webp" alt="Página inicial do site Wester Jiu-Jitsu — Jiu-Jitsu gratuito em Garça/SP" width="1440" height="810" />
+      </figure>
+      <p class="muted" style="font-size:.82rem;margin-top:.6rem;">Página inicial — promessa clara, faixa de destaques e contato imediato.</p>
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h2 class="section__title">Sobre o projeto</h2>
+        <p>O <strong>Wester Jiu-Jitsu</strong> é o núcleo de Jiu-Jitsu do projeto esportivo da Prefeitura de Garça, oferecido pela SEJEL em parceria com o Centro de Convivência Maria Leonor. Mais de 100 alunos treinam com o professor Ricardo Wester, faixa preta.</p>
+        <p>O problema não era falta de aluno — era falta de resposta pronta. Quem ouvia falar do projeto perguntava sempre as mesmas três coisas: <em>é pago? quem pode participar? onde é?</em> O site responde isso antes do primeiro clique e deixa o WhatsApp como único próximo passo.</p>
+
+        <h2 class="section__title">Funcionalidades</h2>
+        <ul class="list">
+          <li>One-page com hierarquia de decisão: gratuito → público → local → contato</li>
+          <li>Faixa de destaques fixa logo abaixo do hero (grátis, 8+, é só chegar)</li>
+          <li>Botões de WhatsApp com mensagem já escrita, um por intenção</li>
+          <li>Links <code>tel:</code> clicáveis e e-mail da SEJEL</li>
+          <li>Seção “Como chegar” com busca pronta no Google Maps</li>
+          <li>SEO: Open Graph, cartão 1200×630 e dados estruturados JSON-LD</li>
+          <li>Menu mobile acessível (fecha com Esc, clique fora e ao navegar)</li>
+          <li>Zero dependências: só HTML, CSS e um JS de 25 linhas</li>
+        </ul>
+
+        <h2 class="section__title">Tecnologias</h2>
+        <div class="tech-grid">
+          <div class="tech-card"><strong>HTML5</strong><span>Semântica • SEO • JSON-LD</span></div>
+          <div class="tech-card"><strong>CSS3</strong><span>Grid • Variáveis • Mobile-first</span></div>
+          <div class="tech-card"><strong>JavaScript</strong><span>Menu mobile • Sem frameworks</span></div>
+          <div class="tech-card"><strong>Python + Pillow</strong><span>Imagem de compartilhamento gerada por script</span></div>
+        </div>
+
+        <h2 class="section__title">Como executar</h2>
+        <pre style="background:var(--card);border:1px solid var(--border);border-radius:4px;padding:1rem 1.2rem;font-size:.85rem;line-height:1.7;">duplo clique em index.html        # arquivo local
+
+# ou, para testar em rede local:
+python -m http.server 8000        # http://localhost:8000</pre>
+
+        <h2 class="section__title">O que aprendi</h2>
+        <ul class="list">
+          <li><strong>Projeto social não vende matrícula</strong> — vende confiança. O texto mudou de “inscreva-se” para “é só chegar” quando entendi o funcionamento real do projeto</li>
+          <li>Uma dúvida respondida vale mais que três seções: “é grátis” virou a manchete, não uma nota de rodapé</li>
+          <li>Imagem de compartilhamento feita por código (Pillow) sai pronta, no tamanho certo e sem depender de Canva</li>
+          <li>Checar o dado oficial antes de publicar: o que estava escrito no cartaz não era o que a Prefeitura havia publicado</li>
+        </ul>
+      </div>
+      <aside class="aside-card">
+        <h3>Ficha técnica</h3>
+        <p><strong>Tipo</strong><br />Site institucional one-page</p>
+        <p><strong>Papel</strong><br />Concepção, conteúdo e front-end do zero</p>
+        <p><strong>Cliente</strong><br />Projeto da Prefeitura de Garça</p>
+        <hr />
+        <h3>Stack</h3>
+        <p>HTML5 • CSS3 • JavaScript • JSON-LD • Python (Pillow)</p>
+        <hr />
+        <h3>Entrega</h3>
+        <p class="muted">Identidade preto/amarelo a partir da logo, texto revisado, mapa, contatos e pacote de deploy pronto.</p>
+        <hr />
+        <h3>Status</h3>
+        <p class="muted">Pronto para publicar. Falta confirmar dias e horários das turmas com a SEJEL.</p>
+        <hr />
+        <a href="projetos.html" class="btn btn--ghost">Voltar aos projetos</a>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Natanael Eugênio Resende</span>
+      <span class="footer__links">
+        <a href="https://github.com/natanaelresende" target="_blank" rel="noopener noreferrer">GitHub</a> •
+        <a href="https://www.linkedin.com/in/natanael-eug%C3%AAAnio-resende-041a163b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
+        <a href="mailto:natanaelresende17@gmail.com">E-mail</a>
+      </span>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
